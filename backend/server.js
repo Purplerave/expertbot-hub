@@ -61,6 +61,6 @@ const geminiService = require('./services/gemini');
 
 // ... (resto del código)
 
-app.listen(PORT, '0.0.0.0', async () => {
+app.listen(PORT, async () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
