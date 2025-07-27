@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_KEY = 'expb_1234567890abcdef'; // Tu clave API
-const BASE_URL = '/api'; // Usa una ruta relativa para que el proxy de React la maneje
+const BASE_URL = 'https://expertbot-hub.onrender.com/api';
 
 const apiClient = axios.create({
   baseURL: BASE_URL,
