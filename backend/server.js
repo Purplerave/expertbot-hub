@@ -16,7 +16,7 @@ const rateLimit = require('express-rate-limit');
 
 // Middlewares
 app.use(cors({
-  origin: 'http://localhost:3000', // Permitir solo el origen del frontend
+  origin: ['http://localhost:3000', 'https://profound-bienenstitch-ac7933.netlify.app'], // Permitir el frontend local y el de producción
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Permitir todos los métodos HTTP
   credentials: true, // Permitir el envío de cookies de origen cruzado
 }));
@@ -61,6 +61,6 @@ const geminiService = require('./services/gemini');
 
 // ... (resto del código)
 
-app.listen(PORT, '127.0.0.1', async () => {
+app.listen(PORT, '0.0.0.0', async () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
